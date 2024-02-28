@@ -1,5 +1,0 @@
-package com.ebit.project.config;
-
-public class KafkaConfig {
-
-}
