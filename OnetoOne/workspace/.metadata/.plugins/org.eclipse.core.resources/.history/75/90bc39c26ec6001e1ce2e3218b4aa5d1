@@ -1,6 +1,0 @@
-package com.ebit.project.controller.serviceinterface;
-
-
-public interface ServiceInterface {
-
-}
