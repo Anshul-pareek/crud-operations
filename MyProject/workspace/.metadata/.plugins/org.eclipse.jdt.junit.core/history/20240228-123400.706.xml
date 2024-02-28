@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyprojectApplicationTests" project="myproject" tests="3" started="3" failures="1" errors="0" ignored="0">
+  <testsuite name="com.ebit.myproject.MyprojectApplicationTests" time="0.298" displayname="MyprojectApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]">
+    <testcase name="getStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.192" displayname="getStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudent()]"/>
+    <testcase name="saveStudentTest" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.027" displayname="saveStudentTest()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:saveStudentTest()]"/>
+    <testcase name="getStudentById" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.074" displayname="getStudentById()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudentById()]">
+      <failure>java.lang.AssertionError: &#13;
+Expecting actual not to be null&#13;
+	at com.ebit.myproject.MyprojectApplicationTests.getStudentById(MyprojectApplicationTests.java:75)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

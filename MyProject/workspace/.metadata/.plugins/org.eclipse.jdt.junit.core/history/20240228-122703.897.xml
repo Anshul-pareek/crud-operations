@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyprojectApplicationTests" project="myproject" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ebit.myproject.MyprojectApplicationTests" time="0.12" displayname="MyprojectApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]">
+    <testcase name="getStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.12" displayname="getStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudent()]"/>
+  </testsuite>
+</testrun>

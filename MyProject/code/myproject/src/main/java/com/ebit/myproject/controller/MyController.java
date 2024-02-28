@@ -13,45 +13,45 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ebit.myproject.model.Student;
-import com.ebit.myproject.service.MyService;
+import com.ebit.myproject.servieInterface.ServiceInterface;
 
 @RestController
 public class MyController {
 	
 	@Autowired
-	private MyService myService;
+	private ServiceInterface serviceInterface;
 	
 	@GetMapping("/student")
 	public List<Student> getData(){
-		return myService.getData();
+		return serviceInterface.getData();
 	}
 	
 	@GetMapping("/student/{id}")
 	public Student addstudent(@PathVariable int id) {
-		return myService.addstudent(id);
+		return serviceInterface.addstudent(id);
 	}
 	
 	@PostMapping("/student")
 	public ResponseEntity<Student> enterdata(@RequestBody Student stu) {
-		return ResponseEntity.ok(myService.enterdata(stu));
+		return ResponseEntity.ok(serviceInterface.enterdata(stu));
 	}
 	
 	@PutMapping("/student/{id}")
 	public String updatedata(@PathVariable int id, @RequestBody Student stu) {
-		myService.updateData(id,stu);
+		serviceInterface.updateData(id,stu);
 		return "data updated";
 	}
 	
 	
 	@DeleteMapping("/student/{id}")
 	public String deleteData(@PathVariable int id) {
-		myService.deleteData(id);
+		serviceInterface.deleteData(id);
 		return "data deleted " + id;
 	}
 	
 	@DeleteMapping("/student")
 	public String deleteData() {
-		myService.deleteAllData();
+		serviceInterface.deleteAllData();
 		return "data deleted";
 	}
 }

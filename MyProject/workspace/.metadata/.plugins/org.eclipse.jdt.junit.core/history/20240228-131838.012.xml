@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyprojectApplicationTests" project="myproject" tests="4" started="4" failures="0" errors="1" ignored="0">
+  <testsuite name="com.ebit.myproject.MyprojectApplicationTests" time="0.175" displayname="MyprojectApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]">
+    <testcase name="getStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.126" displayname="getStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudent()]"/>
+    <testcase name="saveStudentTest" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.015" displayname="saveStudentTest()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:saveStudentTest()]"/>
+    <testcase name="updateStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.019" displayname="updateStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:updateStudent()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.ebit.myproject.model.Student.getName()" because "updateStudent" is null&#13;
+	at com.ebit.myproject.MyprojectApplicationTests.updateStudent(MyprojectApplicationTests.java:93)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="getStudentById" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.005" displayname="getStudentById()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudentById()]"/>
+  </testsuite>
+</testrun>

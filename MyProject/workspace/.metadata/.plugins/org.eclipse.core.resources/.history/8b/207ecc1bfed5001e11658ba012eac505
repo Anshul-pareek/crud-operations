@@ -1,0 +1,57 @@
+package com.ebit.myproject;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.ebit.myproject.model.Student;
+import com.ebit.myproject.repo.MyRepo;
+import com.ebit.myproject.service.MyService;
+
+@DataJpaTest
+public class StudentRepositoryTest {
+
+	@Mock
+	private MyRepo repo;
+	
+	@InjectMocks
+	private MyService service;
+	
+	private Student student;
+	
+	@BeforeEach
+	public void setup() {
+		student = new Student();
+		student.setId(1);
+		student.setName("Anshul");
+		student.setAddress("Jaipur");
+		
+	}
+	
+	@Test
+	public void saveEmployeeTest() {
+		
+		when(repo.findById(student.getId())).thenReturn(Optional.empty());
+		
+		when(repo.save(student)).thenReturn(student);
+
+        System.out.println(repo);
+        System.out.println(service);
+
+        Student savedStudent = service.addstudent(id);
+
+        System.out.println(savedStudent);
+        // then - verify the output
+        assertThat(savedStudent).isNotNull();
+	}
+	
+	
+}

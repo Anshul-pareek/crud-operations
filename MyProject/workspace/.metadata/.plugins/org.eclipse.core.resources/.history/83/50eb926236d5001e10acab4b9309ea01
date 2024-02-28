@@ -1,0 +1,26 @@
+package com.ebit.myproject;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.ebit.myproject.model.Student;
+import com.ebit.myproject.repo.MyRepo;
+
+@DataJpaTest
+public class StudentRepositoryTest {
+
+	@Autowired
+	private MyRepo repo;
+	
+	@Test
+	public void saveStudents() {
+		Student stud = Student.builder
+				.id(1)
+				.name("Anshul")
+				.address("Jaipur")
+				.build();
+		  
+	}
+	
+}

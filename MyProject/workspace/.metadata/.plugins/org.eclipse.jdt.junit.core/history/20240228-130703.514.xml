@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyprojectApplicationTests" project="myproject" tests="4" started="4" failures="1" errors="0" ignored="0">
+  <testsuite name="com.ebit.myproject.MyprojectApplicationTests" time="0.276" displayname="MyprojectApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]">
+    <testcase name="getStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.185" displayname="getStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudent()]"/>
+    <testcase name="saveStudentTest" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.037" displayname="saveStudentTest()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:saveStudentTest()]"/>
+    <testcase name="updateStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.038" displayname="updateStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:updateStudent()]">
+      <failure>
+        <expected>null</expected>
+        <actual>Student [id=1, name=Pareek, address=Pune]</actual>
+        org.opentest4j.AssertionFailedError: &#13;
+expected: null&#13;
+ but was: Student [id=1, name=Pareek, address=Pune]&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at com.ebit.myproject.MyprojectApplicationTests.updateStudent(MyprojectApplicationTests.java:89)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="getStudentById" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.008" displayname="getStudentById()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudentById()]"/>
+  </testsuite>
+</testrun>

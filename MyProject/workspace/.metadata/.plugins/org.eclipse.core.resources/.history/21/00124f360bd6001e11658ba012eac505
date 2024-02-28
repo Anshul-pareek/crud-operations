@@ -1,0 +1,93 @@
+package com.ebit.myproject;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ebit.myproject.model.Student;
+import com.ebit.myproject.repo.MyRepo;
+import com.ebit.myproject.service.MyService;
+
+@SpringBootTest
+class MyprojectApplicationTests {
+
+	@Mock
+	private MyRepo repo;
+	
+	@InjectMocks
+	private MyService service;
+	
+	private Student student;
+	
+	@BeforeEach
+	public void setup() {
+		student = new Student();
+		student.setId(1);
+		student.setName("Anshul");
+		student.setAddress("Jaipur");
+		
+	}
+	
+	//post - enterdata
+	@Test
+	public void saveStudentTest() {
+		
+		when(repo.findById(student.getId())).thenReturn(Optional.empty());
+		when(repo.save(student)).thenReturn(student);
+
+        Student savedStudent = service.enterdata(student);
+
+        System.out.println(savedStudent);
+               assertThat(savedStudent).isNotNull();
+	}
+	
+	//get - getData
+	@Test
+	public void getStudent() {
+		
+		Student student1 = new Student();
+		student1.setId(2);
+		student1.setName("Ashu");
+		student1.setAddress("Ajmer");
+		
+		when(repo.findAll()).thenReturn(List.of(student, student1));
+		
+		List<Student> studentList = service.getData();
+		
+		assertThat(studentList).isNotNull();
+		assertThat(studentList.size()).isEqualTo(2);
+		
+	}
+	
+	//get by id - addstudent
+	@Test
+	public void getStudentById() {
+		when(repo.findById(student.getId())).thenReturn(Optional.of(student));
+		
+		Student savedStudent = service.addstudent(student.getId());
+		assertThat(savedStudent).isNull();
+	}
+	
+	//put
+	@Test
+	public void updateStudent() {
+		when(repo.save(student)).thenReturn(student);
+		Student updatedStudent = new Student();
+	    updatedStudent.setId(1));
+	    updatedStudent.setName("Pareek");
+	    updatedStudent.setAddress("Pune");
+	    
+		Student updateStudent = service.updateData(student.getId(), updatedStudent);
+		
+		assertThat(updateStudent.getName()).isEqualTo("Pareek");
+		assertThat(updateStudent.getAddress()).isEqualTo("Pune");
+	}
+}

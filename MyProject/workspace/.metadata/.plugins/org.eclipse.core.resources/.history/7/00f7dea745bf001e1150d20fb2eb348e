@@ -1,8 +1,0 @@
-package com.ebit.myproject.controller;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class MyController {
-
-}

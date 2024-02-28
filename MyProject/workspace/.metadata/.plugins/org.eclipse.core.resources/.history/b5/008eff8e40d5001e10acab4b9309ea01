@@ -1,0 +1,37 @@
+package com.ebit.myproject;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+import com.ebit.myproject.model.Student;
+import com.ebit.myproject.repo.MyRepo;
+
+@DataJpaTest
+public class StudentRepositoryTest {
+
+	private MockMvc mockMvc;
+	
+	private WebApplicationContext context;
+	
+	@Autowired
+	private MyRepo repo;
+	
+	@Before
+	private void setUp() {
+		mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
+	}
+	@Test
+	public void saveStudentsTest() {
+		Student stud = new Student();
+		stud.setId(1);
+		stud.setName("Anshul");
+		stud.setAddress("Jaipur");
+	}
+	
+}

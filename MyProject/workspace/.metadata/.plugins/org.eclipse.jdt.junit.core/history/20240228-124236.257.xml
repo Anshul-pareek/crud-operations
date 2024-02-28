@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyprojectApplicationTests" project="myproject" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ebit.myproject.MyprojectApplicationTests" time="0.174" displayname="MyprojectApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]">
+    <testcase name="getStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.143" displayname="getStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudent()]"/>
+    <testcase name="saveStudentTest" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.022" displayname="saveStudentTest()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:saveStudentTest()]"/>
+    <testcase name="getStudentById" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.005" displayname="getStudentById()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudentById()]"/>
+  </testsuite>
+</testrun>

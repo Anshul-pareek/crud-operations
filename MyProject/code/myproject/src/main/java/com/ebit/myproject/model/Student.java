@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Student {
-	
+
 	@Id
 	private int id;
 	private String name;
@@ -42,6 +42,9 @@ public class Student {
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
+
+    
+
 
 	
 

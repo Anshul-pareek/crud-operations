@@ -1,0 +1,5 @@
+package com.ebit.myproject.serviceInterface;
+
+public class ServiceInterface {
+
+}

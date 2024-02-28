@@ -1,0 +1,66 @@
+package com.ebit.myproject;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+
+import com.ebit.myproject.model.Student;
+import com.ebit.myproject.repo.MyRepo;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import net.bytebuddy.agent.VirtualMachine.ForHotSpot.Connection.Response;
+
+@DataJpaTest
+public class StudentRepositoryTest {
+
+	private MockMvc mockMvc;
+	
+	private WebApplicationContext context;
+	
+	ObjectMapper om = new ObjectMapper();	
+	@Autowired
+	private MyRepo repo;
+	
+	@Before
+	private void setUp() {
+		mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
+	}
+	@Test
+	public void saveStudentsTest() throws Exception{
+		Student stud = new Student();
+		stud.setId(1);
+		stud.setName("Anshul");
+		stud.setAddress("Jaipur");
+		String jsonRequest=om.writeValueAsString(stud);
+		MvcResult result = mockMvc.perform(post("/student").content(jsonRequest).content(MediaType.APPLICATION_JSON_VALUE))
+				.andExpect(status().isOk()).andReturn();
+		String resultContent = result.getResponse().getContentAsString();
+		Response response = om.readValue(resultContent, Response.class);
+		Assert.assertTrue(response.isStatus() == Boolean.TRUE);
+
+		
+	}
+	@Test
+	public void getEmployeesTest() throws Exception {
+		MvcResult result = mockMvc
+				.perform(get("/EmployeeService/getEmployees").content(MediaType.APPLICATION_JSON_VALUE))
+				.andExpect(status().isOk()).andReturn();
+		String resultContent = result.getResponse().getContentAsString();
+		Response response = om.readValue(resultContent, Response.class);
+		Assert.assertTrue(response.isStatus() == Boolean.TRUE);
+
+	}
+	
+}

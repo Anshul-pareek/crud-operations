@@ -1,0 +1,40 @@
+package com.ebit.myproject;
+
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.ebit.myproject.model.Student;
+import com.ebit.myproject.repo.MyRepo;
+import com.ebit.myproject.service.MyService;
+
+@DataJpaTest
+public class StudentRepositoryTest {
+
+	@Mock
+	private MyRepo repo;
+	
+	@InjectMocks
+	private MyService service;
+	
+	private Student student;
+	
+	@BeforeEach
+	public void setup() {
+		student = new Student();
+		student.setId(1);
+		student.setName("Anshul");
+		student.setAddress("Jaipur");
+		
+	}
+	
+	@Test
+	public void saveEmployeeTest() {
+		
+		given(repo.findStudentById(student.getId())).willReturn.empty();
+	}
+	
+	
+}

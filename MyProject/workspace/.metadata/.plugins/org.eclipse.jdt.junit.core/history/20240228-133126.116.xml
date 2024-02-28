@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MyprojectApplicationTests" project="myproject" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ebit.myproject.MyprojectApplicationTests" time="0.186" displayname="MyprojectApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]">
+    <testcase name="deleteStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.059" displayname="deleteStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:deleteStudent()]"/>
+    <testcase name="getStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.091" displayname="getStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudent()]"/>
+    <testcase name="saveStudentTest" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.011" displayname="saveStudentTest()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:saveStudentTest()]"/>
+    <testcase name="updateStudent" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.01" displayname="updateStudent()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:updateStudent()]"/>
+    <testcase name="getStudentById" classname="com.ebit.myproject.MyprojectApplicationTests" time="0.005" displayname="getStudentById()" uniqueid="[engine:junit-jupiter]/[class:com.ebit.myproject.MyprojectApplicationTests]/[method:getStudentById()]"/>
+  </testsuite>
+</testrun>
